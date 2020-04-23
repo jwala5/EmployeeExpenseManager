@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/jwala/Desktop/Prograd/Sprint4/lib/aspose-cells-20.3.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jwala/Desktop/Prograd/Sprint4/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jwala/Desktop/Prograd/Sprint4/lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jwala/Desktop/Prograd/Sprint4/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jwala/Desktop/Prograd/Sprint4/lib/curvesapi-1.04.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jwala/Desktop/Prograd/Sprint4/lib/dom4j-1.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jwala/Desktop/Prograd/Sprint4/lib/itextpdf-5.4.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jwala/Desktop/Prograd/Sprint4/lib/junit-4.12.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jwala/Desktop/Prograd/Sprint4/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/jwala/Desktop/Prograd/Sprint4/lib/ojdbc6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
