@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.*;
 
 //import com.itextpdf.text.DocumentException;
-
+import Dao.*;
 import Dao.EmployeeOperations;
 import Dao.LeaveOperations;
 import Dao.SalaryOperations;
@@ -15,6 +15,7 @@ import Model.Salary;
 
 public class SecondClass {
 	Scanner sc = new Scanner(System.in);
+	ExtraDao hel= new ExtraDao();
 	void man_emp() {
 	System.out.println("=======================");
 	int choice;
@@ -24,7 +25,9 @@ public class SecondClass {
 	System.out.println("2. UPDATE EMPLOYEE");
 	System.out.println("3. FIRE EMPLOYEE");
 	System.out.println("4. EMPLOYEE DETAILS");
-	System.out.println("5. Exit");
+	System.out.println("5. SEARCH EMPLOYEE");
+	System.out.println("6. SORT EMPLOYEE");
+	System.out.println("7. Exit");
 	
 	String Em_id;
 	String Em_name;
@@ -36,6 +39,7 @@ public class SecondClass {
 	
 	
 	EmployeeOperations ins = new EmployeeOperations();
+	
 	choice = sc.nextInt();
 	switch(choice) {
 	
@@ -87,12 +91,50 @@ public class SecondClass {
 		ins.getAllEmployee();
 		System.out.println("*----------------------------------------*");
 		break;
+	case 5:
+		// getting employee details on console
+		System.out.println("Enter Employee name you want to search");
+		Em_name=sc.next();
+		System.out.println("*----------------------------------------*");
+		System.out.println("           Employee's Detail               ");
+		System.out.println("*----------------------------------------*");
+		System.out.println("Id         Employee_Name     Mobile      email          dept");
+		System.out.println("*----------------------------------------*");
+		hel.DispEmp(Em_name);
+		System.out.println("*----------------------------------------*");
+		break;
+	case 6:
+		// getting employee details on console
+		System.out.println("1. Sort in Ascending");
+		System.out.println("2. Sort in Descending");
+		int srt=sc.nextInt();
+		System.out.println("*----------------------------------------*");
+		System.out.println("           Employee's Detail               ");
+		System.out.println("*----------------------------------------*");
+		System.out.println("Id         Employee_Name     Mobile      email          dept");
+		System.out.println("*----------------------------------------*");
+		if(srt==1) {
+			hel.getAllAscEmployee();
+		
+		}
+		else if(srt==2) {
+			hel.getAllDscEmployee();
+			
+		}
+		else {
+			break;
+			}
+	
+		System.out.println("*----------------------------------------*");
+		break;
+		
+
 default:
 		System.out.println("Wrong input");
 		break;
 		
 	}
-}while(choice!=5);
+}while(choice!=7);
 }
 	
 	
@@ -186,7 +228,9 @@ default:
 				System.out.println("2. UPDATE SALARY");
 				System.out.println("3. DELETE SALARY");
 				System.out.println("4. SALARY DETAILS");
-				System.out.println("5. Exit");
+				System.out.println("5. SEARCH SALARY");
+				System.out.println("6. SORT SALARY");
+				System.out.println("7. Exit");
 				
 				String Sid;
 				String DateDis;
@@ -250,6 +294,30 @@ default:
 					Salo.getAllSalary();
 					System.out.println("*----------------------------------------*");
 					break;
+				case 5:
+					// getting employee details on console
+					System.out.println("Enter Salary Id you want to search");
+					Sid=sc.next();
+					System.out.println("*----------------------------------------*");
+					System.out.println("           Salary's Detail               ");
+					System.out.println("*----------------------------------------*");
+					System.out.println("S_Id         Date_Dis       Amount      Em_id      Expense     TotSal");
+					System.out.println("*----------------------------------------*");
+					hel.DispSal(Sid);
+					System.out.println("*----------------------------------------*");
+					break;
+				case 6:
+					// getting employee details on console
+					System.out.println("Enter Salary from");
+					String s1= sc.next();
+					System.out.println("Enter Salary To");
+					String s2 = sc.next();
+					System.out.println("*----------------------------------------*");
+					System.out.println("            Sorted Salary               ");
+					System.out.println("*----------------------------------------*");
+					System.out.println("S_Id         Date_Dis       Amount      Em_id      Expense     TotSal");
+					System.out.println("*----------------------------------------*");
+					hel.SortSal(s1,s2);
 			default:
 					System.out.println("Wrong input");
 					break;

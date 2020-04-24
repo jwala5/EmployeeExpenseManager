@@ -55,7 +55,8 @@ public class FirstClass {
 		}
 	}while(choice!=4);
 	}
-	void Myemployee() throws ClassNotFoundException, FileNotFoundException, SQLException, DocumentException
+// Employee function
+void Myemployee() throws ClassNotFoundException, FileNotFoundException, SQLException, DocumentException
 	 {	User user =null;
 		DisplayEmp disp = new DisplayEmp();
 		System.out.println("=======================");
